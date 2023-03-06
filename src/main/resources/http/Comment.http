@@ -1,0 +1,38 @@
+### Save Comment
+POST http://localhost:8080/comment
+Content-Type: application/json
+
+{
+  "content": "Vaalaykum assalom",
+  "postId": 2,
+  "profileId": 1
+}
+
+### Comment List
+GET http://localhost:8080/comment
+
+### Get Comment by Id
+GET http://localhost:8080/comment/1
+
+### Delete Comment by Id
+DELETE http://localhost:8080/comment/2
+
+### Update Comment by Id
+PUT http://localhost:8080/comment/5
+Content-Type: application/json
+
+{
+  "content": "Vaalaykum assalom, qalesiz yaxshimisiz uydagilar yaxshimi aniq yaxshimi?"
+}
+
+### Get Comment List With Pagination
+GET http://localhost:8080/comment/list/pagination?page=1&size=2
+
+### Get Comment List By ProfileId
+GET http://localhost:8080/comment/list/profileId/1
+
+### Get Comment Mapper By ProfileId
+GET http://localhost:8080/comment/mapperList/profileId/1
+
+### Get Profile By Comment Id
+GET http://localhost:8080/comment/profile/commentId/1

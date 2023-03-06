@@ -1,0 +1,30 @@
+### Save Contact
+POST http://localhost:8080/contact
+Content-Type: application/json
+
+{
+  "name": "2-xotin 💕"
+}
+
+### Contact List
+GET http://localhost:8080/contact
+
+### Get Contact by Id
+GET http://localhost:8080/contact/3
+
+### Delete Contact by Id
+DELETE http://localhost:8080/contact/1
+
+### Update Contact by Id
+PUT http://localhost:8080/contact/2
+Content-Type: application/json
+
+{
+  "name": "Apteka Center"
+}
+
+### Get Contact by ProfileId
+GET http://localhost:8080/contact/profile/2
+
+### Get Contact by ProfileEntity
+GET http://localhost:8080/contact/profile/2

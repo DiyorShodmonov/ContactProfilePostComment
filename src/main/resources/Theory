@@ -1,0 +1,56 @@
+******** Table **********
+**** create Entity, DTO
+Contact
+    name
+Profile
+    name,surname,contact
+Post
+    title,content,createdDate,Profile
+Comment
+    content, Post,Profile, createdDate
+
+************************************
+**** create Controller,Service,Repository
+
+1. Contact CRUD
+2. Profile CRUD
+    Bitta Profile da bitta contact bo'lishi mumkin.
+3. Post Crud
+    Bitta postni bitta Profile yozishi mumkin.
+4. Comment
+    Bitta Postni Bitta Profile yozishi mumkin.
+    Bitta Post da birnechta comment lar bo'lishi mumkin
+
+** Functionality **
+1. Contact
+    1. Get contact by profileId.
+    2. Get contact by profileEntity (Only in service and repository)
+2. Profile
+    1. Get profile by contactId
+    2. Get profile by contactEntity (Only in service and repository)
+    3. Get profile id, profile name and phone by profileId
+    4. Get profile id, profile name and phone by contactId
+    5. Get profile by post id
+4. Post
+    1. Get post list by profileId with pagination
+    2. Get list of profile id, profile name and post title by profile id with pagination
+    3. Get post tile and created date by post id
+    4. Get post tile list by profile id
+    5. Get last 5 posts of profile by profile id.
+    6. Get profile post count by profile id
+    7. Get profile today's post count by profile id
+    8. Get post id, profile id and post creted date by profile id
+    9. Get list of (post id, profile id and post created date)
+    10. Get today's post list (only post info)
+    11. Get today's post list (post id, post title, profile id, profile name)
+5. Comment
+    1. Get post comment list (postga yozilgan commentlarni olish) with pagination
+    2. Get comment list by profile (profile yozgan barcha commentlarni olish)
+    3. Get list of (comment id, comment content, profile id, profile name) by profile id
+    4. Get Profile by comment id
+    5. Get profile comment count
+    6. Get post comment count (by post id)
+    7. Get post last comment (by post id)
+    8. Get  post(id,title),comment(id,content, created date)
+        and profile (id,name) by profile id with pagination
+    9. Get comment list in given period (fromDate, toDate)

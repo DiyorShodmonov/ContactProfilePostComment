@@ -1,0 +1,60 @@
+### Save Post
+POST http://localhost:8080/post
+Content-Type: application/json
+
+{
+  "title": "My resume8",
+  "content": "This file for My team lead bro",
+  "profileId": 3
+}
+
+### Post List
+GET http://localhost:8080/post
+
+### Get Post by Id
+GET http://localhost:8080/post/1
+### Delete Post by Id
+DELETE http://localhost:8080/post
+
+
+### Update Post by Id
+PUT http://localhost:8080/post/1
+Content-Type: application/json
+
+{
+  "title": "My lovely photo",
+  "content": "This photo for my second husband",
+  "profileId": 1
+}
+
+
+### Get Post by profileId
+GET http://localhost:8080/post/profileId?profileId=3&size=1&page=2
+
+### Get profileId, Profile Name, post title by profileId with pagination
+GET http://localhost:8080/post/postId/2
+
+### Get post title List by profileId
+GET http://localhost:8080/post/title/3
+
+### Get last 5 posts of profile by profileId
+GET http://localhost:8080/post/lastPost/3
+
+### Get profile post count by profileId
+GET http://localhost:8080/post/count/3
+
+### Get today's post count by profileId
+GET http://localhost:8080/post/today/count/3
+
+### Get postId, profileId, PostCreatedDate by profileId
+GET http://localhost:8080/post/post/profile/date/3
+
+### Get postId, profileId, PostCreatedDate list
+GET http://localhost:8080/post/post/profile/date/list
+
+### Get today's post list not detail
+GET http://localhost:8080/post/today/list
+
+### Get today's post list with postId, post title, profileId, profile name
+GET http://localhost:8080/post/today/mapperList
+
